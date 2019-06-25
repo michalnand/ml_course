@@ -1,0 +1,15 @@
+{
+    "input_stream"  : "/home/michal/Videos/path/02_small.mp4",
+    "width"         : 1920,
+    "height"        : 1080,
+
+    "confidence"    : 0.85,
+
+    "network"       : "path_network/network_config.json",
+
+    "print_results_enabled"         : true,
+    "visualisation_enabled"         : true,
+
+    "saving_enabled"        : false,
+    "output_file_name"      : "video.avi"
+}

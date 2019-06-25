@@ -12,27 +12,27 @@
         [
             {
                 "class" : 0,
-                "path"  :  "/home/michal/dataset/path/background_0/"
+                "path"  :  "/home/administrator/dataset/path/background_0/"
             },
             {
                 "class" : 1,
-                "path"  :  "/home/michal/dataset/path/foreground_0/"
+                "path"  :  "/home/administrator/dataset/path/foreground_0/"
             },
             {
                 "class" : 0,
-                "path"  :  "/home/michal/dataset/path/background_1/"
+                "path"  :  "/home/administrator/dataset/path/background_1/"
             },
             {
                 "class" : 1,
-                "path"  :  "/home/michal/dataset/path/foreground_1/"
+                "path"  :  "/home/administrator/dataset/path/foreground_1/"
             },
             {
                 "class" : 0,
-                "path"  :  "/home/michal/dataset/path/background_2/"
+                "path"  :  "/home/administrator/dataset/path/background_2/"
             },
             {
                 "class" : 1,
-                "path"  :  "/home/michal/dataset/path/foreground_2/"
+                "path"  :  "/home/administrator/dataset/path/foreground_2/"
             }
         ]
 

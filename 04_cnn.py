@@ -1,7 +1,7 @@
 from libs_rysy_python.rysy import *
 
 #load dataset
-dataset_path = "/home/michal/dataset/mnist/"
+dataset_path = "/home/administrator/dataset/mnist/"
 dataset = DatasetMnist(dataset_path + "train-images-idx3-ubyte",
                             dataset_path + "train-labels-idx1-ubyte",
                             dataset_path + "t10k-images-idx3-ubyte",
@@ -32,17 +32,17 @@ accuracy afeter 1 epoch = 98.15%
 cnn = CNN(dataset.get_input_shape(), dataset.get_output_shape(), 0.001)
 
 cnn.add_layer("convolution", Shape(3, 3, 16))
-cnn.add_layer("relu")
+cnn.add_layer("elu")
 cnn.add_layer("max_pooling", Shape(2, 2))
 
 cnn.add_layer("convolution", Shape(3, 3, 32))
-cnn.add_layer("relu")
+cnn.add_layer("elu")
 cnn.add_layer("convolution", Shape(3, 3, 32))
-cnn.add_layer("relu")
+cnn.add_layer("elu")
 cnn.add_layer("max_pooling", Shape(2, 2))
 
 cnn.add_layer("convolution", Shape(3, 3, 64))
-cnn.add_layer("relu")
+cnn.add_layer("elu")
 
 cnn.add_layer("dropout")
 
