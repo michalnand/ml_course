@@ -1,5 +1,5 @@
 {
-	"hyperparameters" : 
+	"hyperparameters" :
 	{
 		"dropout" : 0.5,
 		"gradient_clip" : 10,
@@ -8,28 +8,28 @@
 		"learning_rate" : 0.00050000002374872565,
 		"minibatch_size" : 32
 	},
-	"input_shape" : 
+	"input_shape" :
 	[
 		64,
 		64,
 		3
 	],
-	"layers" : 
+	"layers" :
 	[
 		{
-			"input_shape" : 
+			"input_shape" :
 			[
 				64,
 				64,
 				3
 			],
-			"output_shape" : 
+			"output_shape" :
 			[
 				64,
 				64,
 				8
 			],
-			"shape" : 
+			"shape" :
 			[
 				3,
 				3,
@@ -39,19 +39,19 @@
 			"weights_file_name" : "path_network/layer_0"
 		},
 		{
-			"input_shape" : 
+			"input_shape" :
 			[
 				64,
 				64,
 				8
 			],
-			"output_shape" : 
+			"output_shape" :
 			[
 				64,
 				64,
 				8
 			],
-			"shape" : 
+			"shape" :
 			[
 				0,
 				0,
@@ -61,19 +61,19 @@
 			"weights_file_name" : "path_network/layer_1"
 		},
 		{
-			"input_shape" : 
+			"input_shape" :
 			[
 				64,
 				64,
 				8
 			],
-			"output_shape" : 
+			"output_shape" :
 			[
 				32,
 				32,
 				8
 			],
-			"shape" : 
+			"shape" :
 			[
 				2,
 				2,
@@ -83,19 +83,19 @@
 			"weights_file_name" : "path_network/layer_2"
 		},
 		{
-			"input_shape" : 
+			"input_shape" :
 			[
 				32,
 				32,
 				8
 			],
-			"output_shape" : 
+			"output_shape" :
 			[
 				32,
 				32,
 				8
 			],
-			"shape" : 
+			"shape" :
 			[
 				3,
 				3,
@@ -105,19 +105,19 @@
 			"weights_file_name" : "path_network/layer_3"
 		},
 		{
-			"input_shape" : 
+			"input_shape" :
 			[
 				32,
 				32,
 				8
 			],
-			"output_shape" : 
+			"output_shape" :
 			[
 				32,
 				32,
 				8
 			],
-			"shape" : 
+			"shape" :
 			[
 				0,
 				0,
@@ -127,19 +127,19 @@
 			"weights_file_name" : "path_network/layer_4"
 		},
 		{
-			"input_shape" : 
+			"input_shape" :
 			[
 				32,
 				32,
 				8
 			],
-			"output_shape" : 
+			"output_shape" :
 			[
 				16,
 				16,
 				8
 			],
-			"shape" : 
+			"shape" :
 			[
 				2,
 				2,
@@ -149,41 +149,41 @@
 			"weights_file_name" : "path_network/layer_5"
 		},
 		{
-			"input_shape" : 
+			"input_shape" :
 			[
 				16,
 				16,
 				8
 			],
-			"output_shape" : 
+			"output_shape" :
 			[
 				16,
 				16,
-				16
+				8
 			],
-			"shape" : 
+			"shape" :
 			[
 				3,
 				3,
-				16
+				8
 			],
 			"type" : "convolution",
 			"weights_file_name" : "path_network/layer_6"
 		},
 		{
-			"input_shape" : 
+			"input_shape" :
 			[
 				16,
 				16,
-				16
+				8
 			],
-			"output_shape" : 
+			"output_shape" :
 			[
 				16,
 				16,
-				16
+				8
 			],
-			"shape" : 
+			"shape" :
 			[
 				0,
 				0,
@@ -193,19 +193,19 @@
 			"weights_file_name" : "path_network/layer_7"
 		},
 		{
-			"input_shape" : 
+			"input_shape" :
 			[
 				16,
 				16,
-				16
+				8
 			],
-			"output_shape" : 
+			"output_shape" :
 			[
 				8,
 				8,
-				16
+				8
 			],
-			"shape" : 
+			"shape" :
 			[
 				2,
 				2,
@@ -215,117 +215,51 @@
 			"weights_file_name" : "path_network/layer_8"
 		},
 		{
-			"input_shape" : 
+			"input_shape" :
 			[
 				8,
 				8,
-				16
+				8
 			],
-			"output_shape" : 
+			"output_shape" :
 			[
 				8,
 				8,
-				16
+				8
 			],
-			"shape" : 
-			[
-				3,
-				3,
-				16
-			],
-			"type" : "convolution",
-			"weights_file_name" : "path_network/layer_9"
-		},
-		{
-			"input_shape" : 
-			[
-				8,
-				8,
-				16
-			],
-			"output_shape" : 
-			[
-				8,
-				8,
-				16
-			],
-			"shape" : 
-			[
-				0,
-				0,
-				0
-			],
-			"type" : "relu",
-			"weights_file_name" : "path_network/layer_10"
-		},
-		{
-			"input_shape" : 
-			[
-				8,
-				8,
-				16
-			],
-			"output_shape" : 
-			[
-				4,
-				4,
-				16
-			],
-			"shape" : 
-			[
-				2,
-				2,
-				1
-			],
-			"type" : "max_pooling",
-			"weights_file_name" : "path_network/layer_11"
-		},
-		{
-			"input_shape" : 
-			[
-				4,
-				4,
-				16
-			],
-			"output_shape" : 
-			[
-				4,
-				4,
-				16
-			],
-			"shape" : 
+			"shape" :
 			[
 				0,
 				0,
 				0
 			],
 			"type" : "dropout",
-			"weights_file_name" : "path_network/layer_12"
+			"weights_file_name" : "path_network/layer_9"
 		},
 		{
-			"input_shape" : 
+			"input_shape" :
 			[
-				4,
-				4,
-				16
+				8,
+				8,
+				8
 			],
-			"output_shape" : 
+			"output_shape" :
 			[
 				1,
 				1,
 				2
 			],
-			"shape" : 
+			"shape" :
 			[
 				0,
 				0,
 				0
 			],
 			"type" : "output",
-			"weights_file_name" : "path_network/layer_13"
+			"weights_file_name" : "path_network/layer_10"
 		}
 	],
-	"output_shape" : 
+	"output_shape" :
 	[
 		1,
 		1,
