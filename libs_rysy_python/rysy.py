@@ -1289,27 +1289,6 @@ class MatrixDouble(_object):
 MatrixDouble_swigregister = _rysy.MatrixDouble_swigregister
 MatrixDouble_swigregister(MatrixDouble)
 
-class Getchar(_object):
-    __swig_setmethods__ = {}
-    __setattr__ = lambda self, name, value: _swig_setattr(self, Getchar, name, value)
-    __swig_getmethods__ = {}
-    __getattr__ = lambda self, name: _swig_getattr(self, Getchar, name)
-    __repr__ = _swig_repr
-
-    def __init__(self):
-        this = _rysy.new_Getchar()
-        try:
-            self.this.append(this)
-        except __builtin__.Exception:
-            self.this = this
-    __swig_destroy__ = _rysy.delete_Getchar
-    __del__ = lambda self: None
-
-    def get(self):
-        return _rysy.Getchar_get(self)
-Getchar_swigregister = _rysy.Getchar_swigregister
-Getchar_swigregister(Getchar)
-
 class ImageLoad(_object):
     __swig_setmethods__ = {}
     __setattr__ = lambda self, name, value: _swig_setattr(self, ImageLoad, name, value)
@@ -1368,8 +1347,8 @@ class ImageSave(_object):
     def save(self, file_name, v):
         return _rysy.ImageSave_save(self, file_name, v)
 
-    def show(self, v):
-        return _rysy.ImageSave_show(self, v)
+    def show(self, *args):
+        return _rysy.ImageSave_show(self, *args)
 ImageSave_swigregister = _rysy.ImageSave_swigregister
 ImageSave_swigregister(ImageSave)
 
@@ -1399,8 +1378,8 @@ class JsonConfig(_object):
     def save(self, file_name):
         return _rysy.JsonConfig_save(self, file_name)
 
-    def get_result(self):
-        return _rysy.JsonConfig_get_result(self)
+    def get(self):
+        return _rysy.JsonConfig_get(self)
 JsonConfig_swigregister = _rysy.JsonConfig_swigregister
 JsonConfig_swigregister(JsonConfig)
 
@@ -1430,48 +1409,6 @@ class Log(_object):
         return _rysy.Log___lshift__(self, *args)
 Log_swigregister = _rysy.Log_swigregister
 Log_swigregister(Log)
-
-class SVG(_object):
-    __swig_setmethods__ = {}
-    __setattr__ = lambda self, name, value: _swig_setattr(self, SVG, name, value)
-    __swig_getmethods__ = {}
-    __getattr__ = lambda self, name: _swig_getattr(self, SVG, name)
-    __repr__ = _swig_repr
-
-    def __init__(self):
-        this = _rysy.new_SVG()
-        try:
-            self.this.append(this)
-        except __builtin__.Exception:
-            self.this = this
-    __swig_destroy__ = _rysy.delete_SVG
-    __del__ = lambda self: None
-
-    def save(self, file_name):
-        return _rysy.SVG_save(self, file_name)
-
-    def add_header(self, width, height):
-        return _rysy.SVG_add_header(self, width, height)
-
-    def add_footer(self):
-        return _rysy.SVG_add_footer(self)
-
-    def add_rectangle(self, x, y, width, height, swidth, r, g, b, sr, sg, sb):
-        return _rysy.SVG_add_rectangle(self, x, y, width, height, swidth, r, g, b, sr, sg, sb)
-
-    def add_circle(self, x, y, radius, swidth, r, g, b, sr, sg, sb):
-        return _rysy.SVG_add_circle(self, x, y, radius, swidth, r, g, b, sr, sg, sb)
-
-    def add_line(self, x, y, x_end, y_end, swidth, r, g, b, sr, sg, sb):
-        return _rysy.SVG_add_line(self, x, y, x_end, y_end, swidth, r, g, b, sr, sg, sb)
-
-    def add_text(self, x, y, text, size, vertical):
-        return _rysy.SVG_add_text(self, x, y, text, size, vertical)
-
-    def add_image_link(self, x, y, width, height, file_name):
-        return _rysy.SVG_add_image_link(self, x, y, width, height, file_name)
-SVG_swigregister = _rysy.SVG_swigregister
-SVG_swigregister(SVG)
 
 class Timer(_object):
     __swig_setmethods__ = {}
@@ -1509,374 +1446,32 @@ class Timer(_object):
 Timer_swigregister = _rysy.Timer_swigregister
 Timer_swigregister(Timer)
 
-class AutoencoderExperiment(_object):
+class Batch(_object):
     __swig_setmethods__ = {}
-    __setattr__ = lambda self, name, value: _swig_setattr(self, AutoencoderExperiment, name, value)
+    __setattr__ = lambda self, name, value: _swig_setattr(self, Batch, name, value)
     __swig_getmethods__ = {}
-    __getattr__ = lambda self, name: _swig_getattr(self, AutoencoderExperiment, name)
-    __repr__ = _swig_repr
-
-    def __init__(self, dataset, config_dir):
-        this = _rysy.new_AutoencoderExperiment(dataset, config_dir)
-        try:
-            self.this.append(this)
-        except __builtin__.Exception:
-            self.this = this
-    __swig_destroy__ = _rysy.delete_AutoencoderExperiment
-    __del__ = lambda self: None
-
-    def run(self):
-        return _rysy.AutoencoderExperiment_run(self)
-AutoencoderExperiment_swigregister = _rysy.AutoencoderExperiment_swigregister
-AutoencoderExperiment_swigregister(AutoencoderExperiment)
-cvar = _rysy.cvar
-
-class ClassificationCompare(_object):
-    __swig_setmethods__ = {}
-    __setattr__ = lambda self, name, value: _swig_setattr(self, ClassificationCompare, name, value)
-    __swig_getmethods__ = {}
-    __getattr__ = lambda self, name: _swig_getattr(self, ClassificationCompare, name)
+    __getattr__ = lambda self, name: _swig_getattr(self, Batch, name)
     __repr__ = _swig_repr
 
     def __init__(self, *args):
-        this = _rysy.new_ClassificationCompare(*args)
+        this = _rysy.new_Batch(*args)
         try:
             self.this.append(this)
         except __builtin__.Exception:
             self.this = this
-    __swig_destroy__ = _rysy.delete_ClassificationCompare
+    __swig_destroy__ = _rysy.delete_Batch
     __del__ = lambda self: None
 
-    def compare(self, required_value, output_value):
-        return _rysy.ClassificationCompare_compare(self, required_value, output_value)
-
-    def set_classes_count(self, classes_count):
-        return _rysy.ClassificationCompare_set_classes_count(self, classes_count)
-
-    def set_top_n_count(self, top_n_count_):
-        return _rysy.ClassificationCompare_set_top_n_count(self, top_n_count_)
-
-    def clear(self):
-        return _rysy.ClassificationCompare_clear(self)
-
-    def process(self, percent_result):
-        return _rysy.ClassificationCompare_process(self, percent_result)
-
-    def get_success(self):
-        return _rysy.ClassificationCompare_get_success(self)
-
-    def get_summary_result(self):
-        return _rysy.ClassificationCompare_get_summary_result(self)
-
-    def get_text_result(self):
-        return _rysy.ClassificationCompare_get_text_result(self)
-
-    def get_json_result(self):
-        return _rysy.ClassificationCompare_get_json_result(self)
-
-    def save_text_file(self, file_name):
-        return _rysy.ClassificationCompare_save_text_file(self, file_name)
-
-    def save_json_file(self, file_name):
-        return _rysy.ClassificationCompare_save_json_file(self, file_name)
-
-    def get_confusion_matrix(self):
-        return _rysy.ClassificationCompare_get_confusion_matrix(self)
-
-    def get_class_success_rate(self):
-        return _rysy.ClassificationCompare_get_class_success_rate(self)
-
-    def get_classes_count(self):
-        return _rysy.ClassificationCompare_get_classes_count(self)
-ClassificationCompare_swigregister = _rysy.ClassificationCompare_swigregister
-ClassificationCompare_swigregister(ClassificationCompare)
-
-class ClassificationExperiment(_object):
-    __swig_setmethods__ = {}
-    __setattr__ = lambda self, name, value: _swig_setattr(self, ClassificationExperiment, name, value)
-    __swig_getmethods__ = {}
-    __getattr__ = lambda self, name: _swig_getattr(self, ClassificationExperiment, name)
-    __repr__ = _swig_repr
-
-    def __init__(self, dataset, config_dir):
-        this = _rysy.new_ClassificationExperiment(dataset, config_dir)
-        try:
-            self.this.append(this)
-        except __builtin__.Exception:
-            self.this = this
-    __swig_destroy__ = _rysy.delete_ClassificationExperiment
-    __del__ = lambda self: None
-
-    def run(self):
-        return _rysy.ClassificationExperiment_run(self)
-ClassificationExperiment_swigregister = _rysy.ClassificationExperiment_swigregister
-ClassificationExperiment_swigregister(ClassificationExperiment)
-
-class sHistogramItem(_object):
-    __swig_setmethods__ = {}
-    __setattr__ = lambda self, name, value: _swig_setattr(self, sHistogramItem, name, value)
-    __swig_getmethods__ = {}
-    __getattr__ = lambda self, name: _swig_getattr(self, sHistogramItem, name)
-    __repr__ = _swig_repr
-    __swig_setmethods__["count"] = _rysy.sHistogramItem_count_set
-    __swig_getmethods__["count"] = _rysy.sHistogramItem_count_get
-    if _newclass:
-        count = _swig_property(_rysy.sHistogramItem_count_get, _rysy.sHistogramItem_count_set)
-    __swig_setmethods__["normalised_count"] = _rysy.sHistogramItem_normalised_count_set
-    __swig_getmethods__["normalised_count"] = _rysy.sHistogramItem_normalised_count_get
-    if _newclass:
-        normalised_count = _swig_property(_rysy.sHistogramItem_normalised_count_get, _rysy.sHistogramItem_normalised_count_set)
-    __swig_setmethods__["value"] = _rysy.sHistogramItem_value_set
-    __swig_getmethods__["value"] = _rysy.sHistogramItem_value_get
-    if _newclass:
-        value = _swig_property(_rysy.sHistogramItem_value_get, _rysy.sHistogramItem_value_set)
-
-    def __init__(self):
-        this = _rysy.new_sHistogramItem()
-        try:
-            self.this.append(this)
-        except __builtin__.Exception:
-            self.this = this
-    __swig_destroy__ = _rysy.delete_sHistogramItem
-    __del__ = lambda self: None
-sHistogramItem_swigregister = _rysy.sHistogramItem_swigregister
-sHistogramItem_swigregister(sHistogramItem)
-
-class Histogram(_object):
-    __swig_setmethods__ = {}
-    __setattr__ = lambda self, name, value: _swig_setattr(self, Histogram, name, value)
-    __swig_getmethods__ = {}
-    __getattr__ = lambda self, name: _swig_getattr(self, Histogram, name)
-    __repr__ = _swig_repr
-
-    def __init__(self):
-        this = _rysy.new_Histogram()
-        try:
-            self.this.append(this)
-        except __builtin__.Exception:
-            self.this = this
-    __swig_destroy__ = _rysy.delete_Histogram
-    __del__ = lambda self: None
-
-    def add(self, value):
-        return _rysy.Histogram_add(self, value)
-
-    def clear(self):
-        return _rysy.Histogram_clear(self)
-
-    def compute(self, count=201):
-        return _rysy.Histogram_compute(self, count)
-
-    def get_count(self):
-        return _rysy.Histogram_get_count(self)
-
-    def get(self, *args):
-        return _rysy.Histogram_get(self, *args)
-
-    def asString(self):
-        return _rysy.Histogram_asString(self)
-
-    def _print(self):
-        return _rysy.Histogram__print(self)
-
-    def save(self, file_name):
-        return _rysy.Histogram_save(self, file_name)
-
-    def get_max(self):
-        return _rysy.Histogram_get_max(self)
-
-    def get_min(self):
-        return _rysy.Histogram_get_min(self)
-
-    def get_average(self):
-        return _rysy.Histogram_get_average(self)
-
-    def get_std(self):
-        return _rysy.Histogram_get_std(self)
-Histogram_swigregister = _rysy.Histogram_swigregister
-Histogram_swigregister(Histogram)
-
-class RegressionCompare(_object):
-    __swig_setmethods__ = {}
-    __setattr__ = lambda self, name, value: _swig_setattr(self, RegressionCompare, name, value)
-    __swig_getmethods__ = {}
-    __getattr__ = lambda self, name: _swig_getattr(self, RegressionCompare, name)
-    __repr__ = _swig_repr
-
-    def __init__(self, *args):
-        this = _rysy.new_RegressionCompare(*args)
-        try:
-            self.this.append(this)
-        except __builtin__.Exception:
-            self.this = this
-    __swig_destroy__ = _rysy.delete_RegressionCompare
-    __del__ = lambda self: None
-
-    def set_output_size(self, output_size):
-        return _rysy.RegressionCompare_set_output_size(self, output_size)
-
-    def compare(self, required_value, output_value):
-        return _rysy.RegressionCompare_compare(self, required_value, output_value)
-
-    def process(self, fixed_bars_count=-1):
-        return _rysy.RegressionCompare_process(self, fixed_bars_count)
-
-    def get_error_average(self):
-        return _rysy.RegressionCompare_get_error_average(self)
-
-    def get_error_std(self):
-        return _rysy.RegressionCompare_get_error_std(self)
-
-    def get_error_average_euclidean(self):
-        return _rysy.RegressionCompare_get_error_average_euclidean(self)
-
-    def get_error_std_euclidean(self):
-        return _rysy.RegressionCompare_get_error_std_euclidean(self)
-
-    def save_text_file(self, log_file_name_prefix):
-        return _rysy.RegressionCompare_save_text_file(self, log_file_name_prefix)
-
-    def save_json_file(self, json_file_name):
-        return _rysy.RegressionCompare_save_json_file(self, json_file_name)
-
-    def process_json_result(self):
-        return _rysy.RegressionCompare_process_json_result(self)
-RegressionCompare_swigregister = _rysy.RegressionCompare_swigregister
-RegressionCompare_swigregister(RegressionCompare)
-
-class RegressionExperiment(_object):
-    __swig_setmethods__ = {}
-    __setattr__ = lambda self, name, value: _swig_setattr(self, RegressionExperiment, name, value)
-    __swig_getmethods__ = {}
-    __getattr__ = lambda self, name: _swig_getattr(self, RegressionExperiment, name)
-    __repr__ = _swig_repr
-
-    def __init__(self, dataset, config_dir):
-        this = _rysy.new_RegressionExperiment(dataset, config_dir)
-        try:
-            self.this.append(this)
-        except __builtin__.Exception:
-            self.this = this
-    __swig_destroy__ = _rysy.delete_RegressionExperiment
-    __del__ = lambda self: None
-
-    def run(self):
-        return _rysy.RegressionExperiment_run(self)
-RegressionExperiment_swigregister = _rysy.RegressionExperiment_swigregister
-RegressionExperiment_swigregister(RegressionExperiment)
-
-class CNN(_object):
-    __swig_setmethods__ = {}
-    __setattr__ = lambda self, name, value: _swig_setattr(self, CNN, name, value)
-    __swig_getmethods__ = {}
-    __getattr__ = lambda self, name: _swig_getattr(self, CNN, name)
-    __repr__ = _swig_repr
-
-    def __init__(self, *args):
-        this = _rysy.new_CNN(*args)
-        try:
-            self.this.append(this)
-        except __builtin__.Exception:
-            self.this = this
-    __swig_destroy__ = _rysy.delete_CNN
-    __del__ = lambda self: None
-
-    def forward(self, *args):
-        return _rysy.CNN_forward(self, *args)
-
-    def train(self, *args):
-        return _rysy.CNN_train(self, *args)
-
-    def train_from_error(self, error):
-        return _rysy.CNN_train_from_error(self, error)
-
-    def set_training_mode(self):
-        return _rysy.CNN_set_training_mode(self)
-
-    def unset_training_mode(self):
-        return _rysy.CNN_unset_training_mode(self)
-
-    def reset_state(self):
-        return _rysy.CNN_reset_state(self)
-
-    def set_learning_rate(self, learning_rate):
-        return _rysy.CNN_set_learning_rate(self, learning_rate)
-
-    def set_lambda1(self, arg2):
-        return _rysy.CNN_set_lambda1(self, arg2)
-
-    def set_lambda2(self, arg2):
-        return _rysy.CNN_set_lambda2(self, arg2)
-
-    def get_learning_rate(self):
-        return _rysy.CNN_get_learning_rate(self)
-
-    def get_lambda1(self):
-        return _rysy.CNN_get_lambda1(self)
-
-    def get_lambda2(self):
-        return _rysy.CNN_get_lambda2(self)
-
-    def save(self, file_name_prefix):
-        return _rysy.CNN_save(self, file_name_prefix)
-
-    def load_weights(self, file_name_prefix):
-        return _rysy.CNN_load_weights(self, file_name_prefix)
-
-    def get_error_back(self):
-        return _rysy.CNN_get_error_back(self)
-CNN_swigregister = _rysy.CNN_swigregister
-CNN_swigregister(CNN)
-
-class Preprocessing(_object):
-    __swig_setmethods__ = {}
-    __setattr__ = lambda self, name, value: _swig_setattr(self, Preprocessing, name, value)
-    __swig_getmethods__ = {}
-    __getattr__ = lambda self, name: _swig_getattr(self, Preprocessing, name)
-    __repr__ = _swig_repr
-
-    def __init__(self, *args):
-        this = _rysy.new_Preprocessing(*args)
-        try:
-            self.this.append(this)
-        except __builtin__.Exception:
-            self.this = this
-    __swig_destroy__ = _rysy.delete_Preprocessing
-    __del__ = lambda self: None
-
-    def init(self, json, input_geometry):
-        return _rysy.Preprocessing_init(self, json, input_geometry)
-
-    def process(self, output, input, augumentation=0):
-        return _rysy.Preprocessing_process(self, output, input, augumentation)
-Preprocessing_swigregister = _rysy.Preprocessing_swigregister
-Preprocessing_swigregister(Preprocessing)
-
-class sDatasetItem(_object):
-    __swig_setmethods__ = {}
-    __setattr__ = lambda self, name, value: _swig_setattr(self, sDatasetItem, name, value)
-    __swig_getmethods__ = {}
-    __getattr__ = lambda self, name: _swig_getattr(self, sDatasetItem, name)
-    __repr__ = _swig_repr
-    __swig_setmethods__["input"] = _rysy.sDatasetItem_input_set
-    __swig_getmethods__["input"] = _rysy.sDatasetItem_input_get
-    if _newclass:
-        input = _swig_property(_rysy.sDatasetItem_input_get, _rysy.sDatasetItem_input_set)
-    __swig_setmethods__["output"] = _rysy.sDatasetItem_output_set
-    __swig_getmethods__["output"] = _rysy.sDatasetItem_output_get
-    if _newclass:
-        output = _swig_property(_rysy.sDatasetItem_output_get, _rysy.sDatasetItem_output_set)
-
-    def __init__(self):
-        this = _rysy.new_sDatasetItem()
-        try:
-            self.this.append(this)
-        except __builtin__.Exception:
-            self.this = this
-    __swig_destroy__ = _rysy.delete_sDatasetItem
-    __del__ = lambda self: None
-sDatasetItem_swigregister = _rysy.sDatasetItem_swigregister
-sDatasetItem_swigregister(sDatasetItem)
+    def create(self, dataset):
+        return _rysy.Batch_create(self, dataset)
+
+    def get_input_all(self):
+        return _rysy.Batch_get_input_all(self)
+
+    def get_output_all(self):
+        return _rysy.Batch_get_output_all(self)
+Batch_swigregister = _rysy.Batch_swigregister
+Batch_swigregister(Batch)
 
 class DatasetInterface(_object):
     __swig_setmethods__ = {}
@@ -1885,8 +1480,8 @@ class DatasetInterface(_object):
     __getattr__ = lambda self, name: _swig_getattr(self, DatasetInterface, name)
     __repr__ = _swig_repr
 
-    def __init__(self):
-        this = _rysy.new_DatasetInterface()
+    def __init__(self, *args):
+        this = _rysy.new_DatasetInterface(*args)
         try:
             self.this.append(this)
         except __builtin__.Exception:
@@ -1894,98 +1489,76 @@ class DatasetInterface(_object):
     __swig_destroy__ = _rysy.delete_DatasetInterface
     __del__ = lambda self: None
 
+    def get_input_shape(self):
+        return _rysy.DatasetInterface_get_input_shape(self)
+
+    def get_output_shape(self):
+        return _rysy.DatasetInterface_get_output_shape(self)
+
+    def get_training_count(self):
+        return _rysy.DatasetInterface_get_training_count(self)
+
+    def get_testing_count(self):
+        return _rysy.DatasetInterface_get_testing_count(self)
+
+    def get_classes_count(self):
+        return _rysy.DatasetInterface_get_classes_count(self)
+
+    def set_training_idx(self, idx):
+        return _rysy.DatasetInterface_set_training_idx(self, idx)
+
+    def set_random_training_idx(self):
+        return _rysy.DatasetInterface_set_random_training_idx(self)
+
+    def get_training_input(self):
+        return _rysy.DatasetInterface_get_training_input(self)
+
+    def get_training_output(self):
+        return _rysy.DatasetInterface_get_training_output(self)
+
+    def get_training_input_all(self):
+        return _rysy.DatasetInterface_get_training_input_all(self)
+
+    def get_training_output_all(self):
+        return _rysy.DatasetInterface_get_training_output_all(self)
+
+    def get_testing_input(self, idx):
+        return _rysy.DatasetInterface_get_testing_input(self, idx)
+
+    def get_testing_output(self, idx):
+        return _rysy.DatasetInterface_get_testing_output(self, idx)
+
+    def get_testing_input_all(self):
+        return _rysy.DatasetInterface_get_testing_input_all(self)
+
+    def get_testing_output_all(self):
+        return _rysy.DatasetInterface_get_testing_output_all(self)
+
+    def set_input_shape(self, input_shape):
+        return _rysy.DatasetInterface_set_input_shape(self, input_shape)
+
+    def set_output_shape(self, output_shape):
+        return _rysy.DatasetInterface_set_output_shape(self, output_shape)
+
+    def add_training(self, input, output):
+        return _rysy.DatasetInterface_add_training(self, input, output)
+
+    def add_testing(self, input, output):
+        return _rysy.DatasetInterface_add_testing(self, input, output)
+
     def _print(self):
         return _rysy.DatasetInterface__print(self)
 
-    def get_random_training(self):
-        return _rysy.DatasetInterface_get_random_training(self)
+    def clear(self):
+        return _rysy.DatasetInterface_clear(self)
 
-    def get_training(self, class_idx, idx):
-        return _rysy.DatasetInterface_get_training(self, class_idx, idx)
+    def normalise_input(self):
+        return _rysy.DatasetInterface_normalise_input(self)
 
-    def get_class_items_count(self, class_idx):
-        return _rysy.DatasetInterface_get_class_items_count(self, class_idx)
-
-    def get_testing(self, idx):
-        return _rysy.DatasetInterface_get_testing(self, idx)
-
-    def get_random_testing(self):
-        return _rysy.DatasetInterface_get_random_testing(self)
-
-    def get_unlabeled(self, idx):
-        return _rysy.DatasetInterface_get_unlabeled(self, idx)
-
-    def get_random_unlabeled(self):
-        return _rysy.DatasetInterface_get_random_unlabeled(self)
-
-    def get_training_size(self):
-        return _rysy.DatasetInterface_get_training_size(self)
-
-    def get_testing_size(self):
-        return _rysy.DatasetInterface_get_testing_size(self)
-
-    def get_unlabeled_size(self):
-        return _rysy.DatasetInterface_get_unlabeled_size(self)
-
-    def get_input_size(self):
-        return _rysy.DatasetInterface_get_input_size(self)
-
-    def get_output_size(self):
-        return _rysy.DatasetInterface_get_output_size(self)
-
-    def get_width(self):
-        return _rysy.DatasetInterface_get_width(self)
-
-    def get_height(self):
-        return _rysy.DatasetInterface_get_height(self)
-
-    def get_channels(self):
-        return _rysy.DatasetInterface_get_channels(self)
-
-    def print_testing_item(self, idx):
-        return _rysy.DatasetInterface_print_testing_item(self, idx)
-
-    def export_h_testing(self, file_name, count):
-        return _rysy.DatasetInterface_export_h_testing(self, file_name, count)
-
-    def save_to_json(self, file_name):
-        return _rysy.DatasetInterface_save_to_json(self, file_name)
-
-    def save_to_txt_training(self, file_name):
-        return _rysy.DatasetInterface_save_to_txt_training(self, file_name)
-
-    def save_to_txt_testing(self, file_name):
-        return _rysy.DatasetInterface_save_to_txt_testing(self, file_name)
-
-    def save_to_binary(self, training_file_name, testing_file_name, unlabeled_file_name):
-        return _rysy.DatasetInterface_save_to_binary(self, training_file_name, testing_file_name, unlabeled_file_name)
-
-    def save_images(self, training_file_name_prefix, testing_file_name_prefix):
-        return _rysy.DatasetInterface_save_images(self, training_file_name_prefix, testing_file_name_prefix)
+    def normalise_output(self):
+        return _rysy.DatasetInterface_normalise_output(self)
 DatasetInterface_swigregister = _rysy.DatasetInterface_swigregister
 DatasetInterface_swigregister(DatasetInterface)
-
-class DatasetBinary(DatasetInterface):
-    __swig_setmethods__ = {}
-    for _s in [DatasetInterface]:
-        __swig_setmethods__.update(getattr(_s, '__swig_setmethods__', {}))
-    __setattr__ = lambda self, name, value: _swig_setattr(self, DatasetBinary, name, value)
-    __swig_getmethods__ = {}
-    for _s in [DatasetInterface]:
-        __swig_getmethods__.update(getattr(_s, '__swig_getmethods__', {}))
-    __getattr__ = lambda self, name: _swig_getattr(self, DatasetBinary, name)
-    __repr__ = _swig_repr
-
-    def __init__(self, training_file_name, testing_file_name):
-        this = _rysy.new_DatasetBinary(training_file_name, testing_file_name)
-        try:
-            self.this.append(this)
-        except __builtin__.Exception:
-            self.this = this
-    __swig_destroy__ = _rysy.delete_DatasetBinary
-    __del__ = lambda self: None
-DatasetBinary_swigregister = _rysy.DatasetBinary_swigregister
-DatasetBinary_swigregister(DatasetBinary)
 
 class DatasetImages(DatasetInterface):
     __swig_setmethods__ = {}
@@ -2020,8 +1593,8 @@ class DatasetMnist(DatasetInterface):
     __getattr__ = lambda self, name: _swig_getattr(self, DatasetMnist, name)
     __repr__ = _swig_repr
 
-    def __init__(self, training_data_file_name, training_labels_file_name, testing_data_file_name, testing_labels_file_name, make_1d=False):
-        this = _rysy.new_DatasetMnist(training_data_file_name, training_labels_file_name, testing_data_file_name, testing_labels_file_name, make_1d)
+    def __init__(self, training_data_file_name, training_labels_file_name, testing_data_file_name, testing_labels_file_name):
+        this = _rysy.new_DatasetMnist(training_data_file_name, training_labels_file_name, testing_data_file_name, testing_labels_file_name)
         try:
             self.this.append(this)
         except __builtin__.Exception:
@@ -2031,71 +1604,480 @@ class DatasetMnist(DatasetInterface):
 DatasetMnist_swigregister = _rysy.DatasetMnist_swigregister
 DatasetMnist_swigregister(DatasetMnist)
 
-class DatasetPair(DatasetInterface):
+class ClassificationCompare(_object):
     __swig_setmethods__ = {}
-    for _s in [DatasetInterface]:
-        __swig_setmethods__.update(getattr(_s, '__swig_setmethods__', {}))
-    __setattr__ = lambda self, name, value: _swig_setattr(self, DatasetPair, name, value)
+    __setattr__ = lambda self, name, value: _swig_setattr(self, ClassificationCompare, name, value)
     __swig_getmethods__ = {}
-    for _s in [DatasetInterface]:
-        __swig_getmethods__.update(getattr(_s, '__swig_getmethods__', {}))
-    __getattr__ = lambda self, name: _swig_getattr(self, DatasetPair, name)
+    __getattr__ = lambda self, name: _swig_getattr(self, ClassificationCompare, name)
     __repr__ = _swig_repr
 
-    def __init__(self, dataset, training_size_=-1, testing_size_=-1):
-        this = _rysy.new_DatasetPair(dataset, training_size_, testing_size_)
+    def __init__(self, *args):
+        this = _rysy.new_ClassificationCompare(*args)
         try:
             self.this.append(this)
         except __builtin__.Exception:
             self.this = this
-    __swig_destroy__ = _rysy.delete_DatasetPair
+    __swig_destroy__ = _rysy.delete_ClassificationCompare
     __del__ = lambda self: None
-DatasetPair_swigregister = _rysy.DatasetPair_swigregister
-DatasetPair_swigregister(DatasetPair)
 
-class DatasetPreprocessing(DatasetInterface):
+    def init(self, classes_count):
+        return _rysy.ClassificationCompare_init(self, classes_count)
+
+    def add(self, target_output, predicted_output):
+        return _rysy.ClassificationCompare_add(self, target_output, predicted_output)
+
+    def compute(self):
+        return _rysy.ClassificationCompare_compute(self)
+
+    def is_nan_error(self):
+        return _rysy.ClassificationCompare_is_nan_error(self)
+
+    def asString(self):
+        return _rysy.ClassificationCompare_asString(self)
+
+    def asJson(self):
+        return _rysy.ClassificationCompare_asJson(self)
+
+    def get_accuracy(self):
+        return _rysy.ClassificationCompare_get_accuracy(self)
+
+    def get_confusion_matrix(self):
+        return _rysy.ClassificationCompare_get_confusion_matrix(self)
+ClassificationCompare_swigregister = _rysy.ClassificationCompare_swigregister
+ClassificationCompare_swigregister(ClassificationCompare)
+
+class ClassificationExperiment(_object):
     __swig_setmethods__ = {}
-    for _s in [DatasetInterface]:
-        __swig_setmethods__.update(getattr(_s, '__swig_setmethods__', {}))
-    __setattr__ = lambda self, name, value: _swig_setattr(self, DatasetPreprocessing, name, value)
+    __setattr__ = lambda self, name, value: _swig_setattr(self, ClassificationExperiment, name, value)
     __swig_getmethods__ = {}
-    for _s in [DatasetInterface]:
-        __swig_getmethods__.update(getattr(_s, '__swig_getmethods__', {}))
-    __getattr__ = lambda self, name: _swig_getattr(self, DatasetPreprocessing, name)
+    __getattr__ = lambda self, name: _swig_getattr(self, ClassificationExperiment, name)
     __repr__ = _swig_repr
 
-    def __init__(self, dataset, config_file_name):
-        this = _rysy.new_DatasetPreprocessing(dataset, config_file_name)
+    def __init__(self, dataset, experiment_dir, network_config_file):
+        this = _rysy.new_ClassificationExperiment(dataset, experiment_dir, network_config_file)
         try:
             self.this.append(this)
         except __builtin__.Exception:
             self.this = this
-    __swig_destroy__ = _rysy.delete_DatasetPreprocessing
+    __swig_destroy__ = _rysy.delete_ClassificationExperiment
     __del__ = lambda self: None
-DatasetPreprocessing_swigregister = _rysy.DatasetPreprocessing_swigregister
-DatasetPreprocessing_swigregister(DatasetPreprocessing)
 
-class DatasetTicTacToe(DatasetInterface):
+    def run(self):
+        return _rysy.ClassificationExperiment_run(self)
+ClassificationExperiment_swigregister = _rysy.ClassificationExperiment_swigregister
+ClassificationExperiment_swigregister(ClassificationExperiment)
+
+class sShape(_object):
     __swig_setmethods__ = {}
-    for _s in [DatasetInterface]:
-        __swig_setmethods__.update(getattr(_s, '__swig_setmethods__', {}))
-    __setattr__ = lambda self, name, value: _swig_setattr(self, DatasetTicTacToe, name, value)
+    __setattr__ = lambda self, name, value: _swig_setattr(self, sShape, name, value)
     __swig_getmethods__ = {}
-    for _s in [DatasetInterface]:
-        __swig_getmethods__.update(getattr(_s, '__swig_getmethods__', {}))
-    __getattr__ = lambda self, name: _swig_getattr(self, DatasetTicTacToe, name)
+    __getattr__ = lambda self, name: _swig_getattr(self, sShape, name)
     __repr__ = _swig_repr
+    __swig_setmethods__["w"] = _rysy.sShape_w_set
+    __swig_getmethods__["w"] = _rysy.sShape_w_get
+    if _newclass:
+        w = _swig_property(_rysy.sShape_w_get, _rysy.sShape_w_set)
+    __swig_setmethods__["h"] = _rysy.sShape_h_set
+    __swig_getmethods__["h"] = _rysy.sShape_h_get
+    if _newclass:
+        h = _swig_property(_rysy.sShape_h_get, _rysy.sShape_h_set)
+    __swig_setmethods__["d"] = _rysy.sShape_d_set
+    __swig_getmethods__["d"] = _rysy.sShape_d_get
+    if _newclass:
+        d = _swig_property(_rysy.sShape_d_get, _rysy.sShape_d_set)
 
-    def __init__(self, data_file_name, testing_ratio=0.5, padding=0):
-        this = _rysy.new_DatasetTicTacToe(data_file_name, testing_ratio, padding)
+    def __init__(self):
+        this = _rysy.new_sShape()
         try:
             self.this.append(this)
         except __builtin__.Exception:
             self.this = this
-    __swig_destroy__ = _rysy.delete_DatasetTicTacToe
+    __swig_destroy__ = _rysy.delete_sShape
     __del__ = lambda self: None
-DatasetTicTacToe_swigregister = _rysy.DatasetTicTacToe_swigregister
-DatasetTicTacToe_swigregister(DatasetTicTacToe)
+sShape_swigregister = _rysy.sShape_swigregister
+sShape_swigregister(sShape)
+
+class Shape(_object):
+    __swig_setmethods__ = {}
+    __setattr__ = lambda self, name, value: _swig_setattr(self, Shape, name, value)
+    __swig_getmethods__ = {}
+    __getattr__ = lambda self, name: _swig_getattr(self, Shape, name)
+    __repr__ = _swig_repr
+
+    def __init__(self, *args):
+        this = _rysy.new_Shape(*args)
+        try:
+            self.this.append(this)
+        except __builtin__.Exception:
+            self.this = this
+    __swig_destroy__ = _rysy.delete_Shape
+    __del__ = lambda self: None
+
+    def w(self):
+        return _rysy.Shape_w(self)
+
+    def h(self):
+        return _rysy.Shape_h(self)
+
+    def d(self):
+        return _rysy.Shape_d(self)
+
+    def get(self):
+        return _rysy.Shape_get(self)
+
+    def set(self, *args):
+        return _rysy.Shape_set(self, *args)
+
+    def size(self):
+        return _rysy.Shape_size(self)
+
+    def _print(self):
+        return _rysy.Shape__print(self)
+
+    def __eq__(self, *args):
+        return _rysy.Shape___eq__(self, *args)
+
+    def __ne__(self, *args):
+        return _rysy.Shape___ne__(self, *args)
+Shape_swigregister = _rysy.Shape_swigregister
+Shape_swigregister(Shape)
+
+class Tensor(_object):
+    __swig_setmethods__ = {}
+    __setattr__ = lambda self, name, value: _swig_setattr(self, Tensor, name, value)
+    __swig_getmethods__ = {}
+    __getattr__ = lambda self, name: _swig_getattr(self, Tensor, name)
+    __repr__ = _swig_repr
+
+    def __init__(self, *args):
+        this = _rysy.new_Tensor(*args)
+        try:
+            self.this.append(this)
+        except __builtin__.Exception:
+            self.this = this
+    __swig_destroy__ = _rysy.delete_Tensor
+    __del__ = lambda self: None
+
+    def w(self):
+        return _rysy.Tensor_w(self)
+
+    def h(self):
+        return _rysy.Tensor_h(self)
+
+    def d(self):
+        return _rysy.Tensor_d(self)
+
+    def size(self):
+        return _rysy.Tensor_size(self)
+
+    def shape(self):
+        return _rysy.Tensor_shape(self)
+
+    def shape_struct(self):
+        return _rysy.Tensor_shape_struct(self)
+
+    def init(self, *args):
+        return _rysy.Tensor_init(self, *args)
+
+    def set_from_host(self, *args):
+        return _rysy.Tensor_set_from_host(self, *args)
+
+    def set_to_host(self, *args):
+        return _rysy.Tensor_set_to_host(self, *args)
+
+    def set_const(self, value):
+        return _rysy.Tensor_set_const(self, value)
+
+    def clear(self):
+        return _rysy.Tensor_clear(self)
+
+    def set_random(self, range):
+        return _rysy.Tensor_set_random(self, range)
+
+    def set(self, x, y, z, value):
+        return _rysy.Tensor_set(self, x, y, z, value)
+
+    def get(self, x, y, z):
+        return _rysy.Tensor_get(self, x, y, z)
+
+    def _print(self):
+        return _rysy.Tensor__print(self)
+
+    def save(self, file_name):
+        return _rysy.Tensor_save(self, file_name)
+
+    def load(self, file_name):
+        return _rysy.Tensor_load(self, file_name)
+
+    def is_valid(self):
+        return _rysy.Tensor_is_valid(self)
+
+    def add(self, rhs):
+        return _rysy.Tensor_add(self, rhs)
+
+    def sub(self, rhs):
+        return _rysy.Tensor_sub(self, rhs)
+
+    def mul(self, value):
+        return _rysy.Tensor_mul(self, value)
+
+    def concatenate(self, ta, tb):
+        return _rysy.Tensor_concatenate(self, ta, tb)
+
+    def split(self, ta, tb):
+        return _rysy.Tensor_split(self, ta, tb)
+    __swig_setmethods__["v"] = _rysy.Tensor_v_set
+    __swig_getmethods__["v"] = _rysy.Tensor_v_get
+    if _newclass:
+        v = _swig_property(_rysy.Tensor_v_get, _rysy.Tensor_v_set)
+Tensor_swigregister = _rysy.Tensor_swigregister
+Tensor_swigregister(Tensor)
+
+class CNN(_object):
+    __swig_setmethods__ = {}
+    __setattr__ = lambda self, name, value: _swig_setattr(self, CNN, name, value)
+    __swig_getmethods__ = {}
+    __getattr__ = lambda self, name: _swig_getattr(self, CNN, name)
+    __repr__ = _swig_repr
+
+    def __init__(self, *args):
+        this = _rysy.new_CNN(*args)
+        try:
+            self.this.append(this)
+        except __builtin__.Exception:
+            self.this = this
+    __swig_destroy__ = _rysy.delete_CNN
+    __del__ = lambda self: None
+
+    def get_input_shape(self):
+        return _rysy.CNN_get_input_shape(self)
+
+    def get_output_shape(self):
+        return _rysy.CNN_get_output_shape(self)
+
+    def forward(self, *args):
+        return _rysy.CNN_forward(self, *args)
+
+    def train(self, *args):
+        return _rysy.CNN_train(self, *args)
+
+    def train_from_error(self, error):
+        return _rysy.CNN_train_from_error(self, error)
+
+    def get_error_back(self):
+        return _rysy.CNN_get_error_back(self)
+
+    def set_training_mode(self):
+        return _rysy.CNN_set_training_mode(self)
+
+    def unset_training_mode(self):
+        return _rysy.CNN_unset_training_mode(self)
+
+    def is_training_mode(self):
+        return _rysy.CNN_is_training_mode(self)
+
+    def reset(self):
+        return _rysy.CNN_reset(self)
+
+    def add_layer(self, *args):
+        return _rysy.CNN_add_layer(self, *args)
+
+    def asString(self):
+        return _rysy.CNN_asString(self)
+
+    def _print(self):
+        return _rysy.CNN__print(self)
+
+    def save(self, path):
+        return _rysy.CNN_save(self, path)
+
+    def load_weights(self, file_name_prefix):
+        return _rysy.CNN_load_weights(self, file_name_prefix)
+
+    def get_layer_output_size(self):
+        return _rysy.CNN_get_layer_output_size(self)
+
+    def get_layer_output(self, layer_idx):
+        return _rysy.CNN_get_layer_output(self, layer_idx)
+
+    def get_layer_weights_flag(self, layer_idx):
+        return _rysy.CNN_get_layer_weights_flag(self, layer_idx)
+CNN_swigregister = _rysy.CNN_swigregister
+CNN_swigregister(CNN)
+
+class CNNVisualisation(_object):
+    __swig_setmethods__ = {}
+    __setattr__ = lambda self, name, value: _swig_setattr(self, CNNVisualisation, name, value)
+    __swig_getmethods__ = {}
+    __getattr__ = lambda self, name: _swig_getattr(self, CNNVisualisation, name)
+    __repr__ = _swig_repr
+
+    def __init__(self, nn):
+        this = _rysy.new_CNNVisualisation(nn)
+        try:
+            self.this.append(this)
+        except __builtin__.Exception:
+            self.this = this
+    __swig_destroy__ = _rysy.delete_CNNVisualisation
+    __del__ = lambda self: None
+
+    def process(self):
+        return _rysy.CNNVisualisation_process(self)
+
+    def save(self, file_name_prefix):
+        return _rysy.CNNVisualisation_save(self, file_name_prefix)
+CNNVisualisation_swigregister = _rysy.CNNVisualisation_swigregister
+CNNVisualisation_swigregister(CNNVisualisation)
+
+class ExperienceReplayBuffer(_object):
+    __swig_setmethods__ = {}
+    __setattr__ = lambda self, name, value: _swig_setattr(self, ExperienceReplayBuffer, name, value)
+    __swig_getmethods__ = {}
+    __getattr__ = lambda self, name: _swig_getattr(self, ExperienceReplayBuffer, name)
+    __repr__ = _swig_repr
+
+    def __init__(self, *args):
+        this = _rysy.new_ExperienceReplayBuffer(*args)
+        try:
+            self.this.append(this)
+        except __builtin__.Exception:
+            self.this = this
+    __swig_destroy__ = _rysy.delete_ExperienceReplayBuffer
+    __del__ = lambda self: None
+
+    def init(self, buffer_size, state_size, actions_count):
+        return _rysy.ExperienceReplayBuffer_init(self, buffer_size, state_size, actions_count)
+
+    def add(self, state, q_values, action, reward, terminal=False):
+        return _rysy.ExperienceReplayBuffer_add(self, state, q_values, action, reward, terminal)
+
+    def is_full(self):
+        return _rysy.ExperienceReplayBuffer_is_full(self)
+
+    def compute(self, gamma=0.99, clamp_value=10.0):
+        return _rysy.ExperienceReplayBuffer_compute(self, gamma, clamp_value)
+
+    def size(self):
+        return _rysy.ExperienceReplayBuffer_size(self)
+
+    def _print(self):
+        return _rysy.ExperienceReplayBuffer__print(self)
+
+    def get_state(self):
+        return _rysy.ExperienceReplayBuffer_get_state(self)
+
+    def get_q_values(self):
+        return _rysy.ExperienceReplayBuffer_get_q_values(self)
+
+    def get_action(self):
+        return _rysy.ExperienceReplayBuffer_get_action(self)
+
+    def get_reward(self):
+        return _rysy.ExperienceReplayBuffer_get_reward(self)
+
+    def get_terminal(self):
+        return _rysy.ExperienceReplayBuffer_get_terminal(self)
+ExperienceReplayBuffer_swigregister = _rysy.ExperienceReplayBuffer_swigregister
+ExperienceReplayBuffer_swigregister(ExperienceReplayBuffer)
+
+class DQN(_object):
+    __swig_setmethods__ = {}
+    __setattr__ = lambda self, name, value: _swig_setattr(self, DQN, name, value)
+    __swig_getmethods__ = {}
+    __getattr__ = lambda self, name: _swig_getattr(self, DQN, name)
+    __repr__ = _swig_repr
+
+    def __init__(self, *args):
+        this = _rysy.new_DQN(*args)
+        try:
+            self.this.append(this)
+        except __builtin__.Exception:
+            self.this = this
+    __swig_destroy__ = _rysy.delete_DQN
+    __del__ = lambda self: None
+
+    def init(self, *args):
+        return _rysy.DQN_init(self, *args)
+
+    def add_layer(self, *args):
+        return _rysy.DQN_add_layer(self, *args)
+
+    def forward(self, state):
+        return _rysy.DQN_forward(self, state)
+
+    def get_q_values(self):
+        return _rysy.DQN_get_q_values(self)
+
+    def add(self, state, q_values, action, reward, terminal=False):
+        return _rysy.DQN_add(self, state, q_values, action, reward, terminal)
+
+    def is_full(self):
+        return _rysy.DQN_is_full(self)
+
+    def train(self):
+        return _rysy.DQN_train(self)
+
+    def _print(self):
+        return _rysy.DQN__print(self)
+
+    def print_buffer(self):
+        return _rysy.DQN_print_buffer(self)
+
+    def save(self, path):
+        return _rysy.DQN_save(self, path)
+
+    def load_weights(self, file_name_prefix):
+        return _rysy.DQN_load_weights(self, file_name_prefix)
+DQN_swigregister = _rysy.DQN_swigregister
+DQN_swigregister(DQN)
+
+class DQNA(_object):
+    __swig_setmethods__ = {}
+    __setattr__ = lambda self, name, value: _swig_setattr(self, DQNA, name, value)
+    __swig_getmethods__ = {}
+    __getattr__ = lambda self, name: _swig_getattr(self, DQNA, name)
+    __repr__ = _swig_repr
+
+    def __init__(self, *args):
+        this = _rysy.new_DQNA(*args)
+        try:
+            self.this.append(this)
+        except __builtin__.Exception:
+            self.this = this
+    __swig_destroy__ = _rysy.delete_DQNA
+    __del__ = lambda self: None
+
+    def init(self, state_shape, actions_count, gamma, replay_buffer_size, features_network_config_file_name, reconstruction_network_config_file_name, q_network_config_file_name):
+        return _rysy.DQNA_init(self, state_shape, actions_count, gamma, replay_buffer_size, features_network_config_file_name, reconstruction_network_config_file_name, q_network_config_file_name)
+
+    def forward(self, state):
+        return _rysy.DQNA_forward(self, state)
+
+    def get_q_values(self):
+        return _rysy.DQNA_get_q_values(self)
+
+    def add(self, state, q_values, action, reward, terminal=False):
+        return _rysy.DQNA_add(self, state, q_values, action, reward, terminal)
+
+    def is_full(self):
+        return _rysy.DQNA_is_full(self)
+
+    def train(self):
+        return _rysy.DQNA_train(self)
+
+    def _print(self):
+        return _rysy.DQNA__print(self)
+
+    def print_buffer(self):
+        return _rysy.DQNA_print_buffer(self)
+
+    def save(self, path):
+        return _rysy.DQNA_save(self, path)
+
+    def load_weights(self, file_name_prefix):
+        return _rysy.DQNA_load_weights(self, file_name_prefix)
+DQNA_swigregister = _rysy.DQNA_swigregister
+DQNA_swigregister(DQNA)
 
 # This file is compatible with both classic and new-style classes.
 
