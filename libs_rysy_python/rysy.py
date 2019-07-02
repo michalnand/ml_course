@@ -1620,8 +1620,8 @@ class ClassificationCompare(_object):
     __swig_destroy__ = _rysy.delete_ClassificationCompare
     __del__ = lambda self: None
 
-    def init(self, classes_count):
-        return _rysy.ClassificationCompare_init(self, classes_count)
+    def init(self, classes_count, top_n_count=1):
+        return _rysy.ClassificationCompare_init(self, classes_count, top_n_count)
 
     def add(self, target_output, predicted_output):
         return _rysy.ClassificationCompare_add(self, target_output, predicted_output)
@@ -1643,6 +1643,9 @@ class ClassificationCompare(_object):
 
     def get_confusion_matrix(self):
         return _rysy.ClassificationCompare_get_confusion_matrix(self)
+
+    def get_class_success_rate(self):
+        return _rysy.ClassificationCompare_get_class_success_rate(self)
 ClassificationCompare_swigregister = _rysy.ClassificationCompare_swigregister
 ClassificationCompare_swigregister(ClassificationCompare)
 
@@ -2078,6 +2081,114 @@ class DQNA(_object):
         return _rysy.DQNA_load_weights(self, file_name_prefix)
 DQNA_swigregister = _rysy.DQNA_swigregister
 DQNA_swigregister(DQNA)
+
+class StackedState(_object):
+    __swig_setmethods__ = {}
+    __setattr__ = lambda self, name, value: _swig_setattr(self, StackedState, name, value)
+    __swig_getmethods__ = {}
+    __getattr__ = lambda self, name: _swig_getattr(self, StackedState, name)
+    __repr__ = _swig_repr
+
+    def __init__(self, *args):
+        this = _rysy.new_StackedState(*args)
+        try:
+            self.this.append(this)
+        except __builtin__.Exception:
+            self.this = this
+    __swig_destroy__ = _rysy.delete_StackedState
+    __del__ = lambda self: None
+
+    def init(self, input_shape, frames):
+        return _rysy.StackedState_init(self, input_shape, frames)
+
+    def shape(self):
+        return _rysy.StackedState_shape(self)
+
+    def set(self, x, y, z, v):
+        return _rysy.StackedState_set(self, x, y, z, v)
+
+    def get(self, *args):
+        return _rysy.StackedState_get(self, *args)
+
+    def next_frame(self):
+        return _rysy.StackedState_next_frame(self)
+
+    def clear(self):
+        return _rysy.StackedState_clear(self)
+
+    def _print(self):
+        return _rysy.StackedState__print(self)
+
+    def random(self):
+        return _rysy.StackedState_random(self)
+StackedState_swigregister = _rysy.StackedState_swigregister
+StackedState_swigregister(StackedState)
+
+class LayerExport(_object):
+    __swig_setmethods__ = {}
+    __setattr__ = lambda self, name, value: _swig_setattr(self, LayerExport, name, value)
+    __swig_getmethods__ = {}
+    __getattr__ = lambda self, name: _swig_getattr(self, LayerExport, name)
+    __repr__ = _swig_repr
+
+    def __init__(self, export_path, json, layer_prefix, input_shape, output_shape):
+        this = _rysy.new_LayerExport(export_path, json, layer_prefix, input_shape, output_shape)
+        try:
+            self.this.append(this)
+        except __builtin__.Exception:
+            self.this = this
+    __swig_destroy__ = _rysy.delete_LayerExport
+    __del__ = lambda self: None
+
+    def get(self):
+        return _rysy.LayerExport_get(self)
+
+    def save(self):
+        return _rysy.LayerExport_save(self)
+LayerExport_swigregister = _rysy.LayerExport_swigregister
+LayerExport_swigregister(LayerExport)
+
+class EmbeddedNetworkTest(_object):
+    __swig_setmethods__ = {}
+    __setattr__ = lambda self, name, value: _swig_setattr(self, EmbeddedNetworkTest, name, value)
+    __swig_getmethods__ = {}
+    __getattr__ = lambda self, name: _swig_getattr(self, EmbeddedNetworkTest, name)
+    __repr__ = _swig_repr
+
+    def __init__(self, dataset, nn):
+        this = _rysy.new_EmbeddedNetworkTest(dataset, nn)
+        try:
+            self.this.append(this)
+        except __builtin__.Exception:
+            self.this = this
+    __swig_destroy__ = _rysy.delete_EmbeddedNetworkTest
+    __del__ = lambda self: None
+
+    def process(self):
+        return _rysy.EmbeddedNetworkTest_process(self)
+EmbeddedNetworkTest_swigregister = _rysy.EmbeddedNetworkTest_swigregister
+EmbeddedNetworkTest_swigregister(EmbeddedNetworkTest)
+
+class EmbeddedNetworkExport(_object):
+    __swig_setmethods__ = {}
+    __setattr__ = lambda self, name, value: _swig_setattr(self, EmbeddedNetworkExport, name, value)
+    __swig_getmethods__ = {}
+    __getattr__ = lambda self, name: _swig_getattr(self, EmbeddedNetworkExport, name)
+    __repr__ = _swig_repr
+
+    def __init__(self, trained_config_file_name):
+        this = _rysy.new_EmbeddedNetworkExport(trained_config_file_name)
+        try:
+            self.this.append(this)
+        except __builtin__.Exception:
+            self.this = this
+    __swig_destroy__ = _rysy.delete_EmbeddedNetworkExport
+    __del__ = lambda self: None
+
+    def process(self, export_path, network_prefix):
+        return _rysy.EmbeddedNetworkExport_process(self, export_path, network_prefix)
+EmbeddedNetworkExport_swigregister = _rysy.EmbeddedNetworkExport_swigregister
+EmbeddedNetworkExport_swigregister(EmbeddedNetworkExport)
 
 # This file is compatible with both classic and new-style classes.
 

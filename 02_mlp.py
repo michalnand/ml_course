@@ -17,8 +17,7 @@ accuracy = 96.5%
 '''
 cnn = CNN(dataset.get_input_shape(), dataset.get_output_shape(), 0.001)
 
-cnn.add_layer("fc", Shape(1, 1, 1024))
-cnn.add_layer("relu")
+
 cnn.add_layer("fc", Shape(1, 1, 256))
 cnn.add_layer("relu")
 cnn.add_layer("output")
